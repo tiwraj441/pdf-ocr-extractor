@@ -82,12 +82,12 @@ export default function Home() {
             disabled:bg-gray-400 disabled:cursor-not-allowed 
             transition-all"
         >
-          {loading ? '⏳ Processing...' : '🚀 Extract Text'}
+          {loading ? '⏳ Processing...' : ' Extract Text'}
         </button>
 
         {error && (
           <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-            <p className="text-red-800 font-semibold">❌ Error</p>
+            <p className="text-red-800 font-semibold"> Error</p>
             <p className="text-red-700">{error}</p>
           </div>
         )}
@@ -117,7 +117,7 @@ export default function Home() {
 
             <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="font-bold text-xl text-gray-800">📝 Extracted Text</h3>
+                <h3 className="font-bold text-xl text-gray-800">Extracted Text</h3>
                 <button
                   onClick={() => navigator.clipboard.writeText(result.text)}
                   className="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-lg 
