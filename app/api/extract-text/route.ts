@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    console.log(`📄 Processing: ${file.name}`);
+    console.log(`Processing: ${file.name}`);
 
     const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
     // Check if we got meaningful text
     if (extractedText.length > 50) {
       // Digital PDF with embedded text
-      console.log(`✅ Extracted text from ${data.numpages} pages`);
+      console.log(`Extracted text from ${data.numpages} pages`);
       return NextResponse.json({
         success: true,
         text: extractedText,
@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Scanned PDF - Use OCR.space API (free tier)
-    console.log('📸 Scanned PDF detected, using OCR...');
+    console.log(' Scanned PDF detected, using OCR...');
     
     const ocrFormData = new FormData();
     ocrFormData.append('file', file);
@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
       throw new Error('No text could be extracted from the scanned document');
     }
 
-    console.log(`✅ OCR completed successfully`);
+    console.log(` OCR completed successfully`);
 
     return NextResponse.json({
       success: true,
@@ -87,7 +87,7 @@ export async function POST(request: NextRequest) {
     });
 
   } catch (error: any) {
-    console.error('❌ Error:', error);
+    console.error(' Error:', error);
     return NextResponse.json(
       { success: false, error: error.message },
       { status: 500 }
