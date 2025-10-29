@@ -2,6 +2,10 @@
 
 Extract text from digital and scanned PDF documents automatically using Next.js 14 and TypeScript.
 
+## 🌐 Live Demo
+
+Try it now: https://ocr-pdf-bkuvnkvet-rajdeep-tiwaris-projects-4a1cab9a.vercel.app
+
 ## ✨ Features
 
 -  Smart detection (digital vs scanned PDFs)
