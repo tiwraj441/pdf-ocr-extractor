@@ -21,14 +21,13 @@ export async function POST(request: NextRequest) {
     const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
 
-    // Try pdf-parse first (for digital PDFs)
     console.log('📄 Attempting text extraction...');
     const data = await pdfParse(buffer);
     const extractedText = data.text.trim();
     
-    // Check if we got meaningful text
+   
     if (extractedText.length > 50) {
-      // Digital PDF with embedded text
+      
       console.log(`Extracted text from ${data.numpages} pages`);
       return NextResponse.json({
         success: true,
@@ -42,7 +41,7 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // Scanned PDF - Use OCR.space API (free tier)
+   
     console.log(' Scanned PDF detected, using OCR...');
     
     const ocrFormData = new FormData();
