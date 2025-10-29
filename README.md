@@ -4,12 +4,12 @@ Extract text from digital and scanned PDF documents automatically using Next.js 
 
 ## ✨ Features
 
-- 🎯 Smart detection (digital vs scanned PDFs)
-- ⚡ Fast extraction for digital PDFs (< 1 second)
-- 🔍 OCR support for scanned documents
-- 🎨 Modern, responsive UI
-- 📋 Copy text to clipboard
-- ✅ File validation (max 10MB)
+-  Smart detection (digital vs scanned PDFs)
+-  Fast extraction for digital PDFs (< 1 second)
+-  OCR support for scanned documents
+-  Modern, responsive UI
+-  Copy text to clipboard
+-  File validation (max 10MB)
 
 ## 🛠️ Tech Stack
 
